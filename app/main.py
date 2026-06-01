@@ -8,3 +8,7 @@ app.include_router(user_router)
 @app.get("/")
 def home():
     return {"message": "API funcionando"}
+
+app = FastAPI()
+
+app.include_router(user_router)
