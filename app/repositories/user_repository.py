@@ -1,3 +1,5 @@
+from bson import ObjectId
+
 from app.database.mongodb import db
 
 class UserRepository:
@@ -6,15 +8,27 @@ class UserRepository:
 
     @classmethod
     def create(cls, user_data):
-        print("Dados recebidos:", user_data)
+        if not user_data.get("name") or not user_data.get("email"):
+            raise ValueError("Nome e email são obrigatórios")
 
         result = cls.collection.insert_one(user_data)
 
-        print("ID salvo:", result.inserted_id)
-
         return str(result.inserted_id)
     
+    
     @classmethod
-    def delete(cls, user_id):
-        result = cls.collection.delete_one({"_id": user_id})
-        return str(user_id)
+    def find_by_email(cls, email):
+        return cls.collection.find_one({"email": email})
+    
+
+    @classmethod
+    def update(cls, user_data):
+
+
+        result = cls.collection.update_one(
+            {"email": user_data["email"]},
+            {"$set": user_data}
+            
+        )
+
+        return result.modified_count
