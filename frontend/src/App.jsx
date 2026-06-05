@@ -1,0 +1,10 @@
+function App() {
+  return (
+    <div>
+      <h1>FETIN - Sistema de Monitoramento</h1>
+      <p>Frontend React funcionando!</p>
+    </div>
+  );
+}
+
+export default App;
