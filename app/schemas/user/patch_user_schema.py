@@ -1,9 +1,9 @@
-from pydantic import BaseModel
+from pydantic import BaseModel, EmailStr, Field
+from typing import Optional
+
 
 class UserUpdateSchema(BaseModel):
-    name: str | None = None
-    cell: str | None = None
-    password: str | None = None
-    cpf: str | None = None
-    email: str | None = None
-    cell: str | None = None
+    name: Optional[str] = None
+    cpf: Optional[str] = None
+    cell: Optional[str] = None
+    password: Optional[str] = None
