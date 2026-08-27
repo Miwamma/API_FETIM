@@ -19,3 +19,11 @@ class MedicaoRepository:
     def find_latest(cls, device_id: str = None):
         query = {"deviceId": device_id} if device_id else {}
         return cls.collection.find_one(query, sort=[("timestamp", -1)])
+
+    @classmethod
+    def find_volumes_by_device(cls, device_id: str):
+        cursor = cls.collection.find(
+            {"deviceId": device_id},
+            {"volume": 1, "_id": 0}
+        )
+        return [doc["volume"] for doc in cursor if "volume" in doc]

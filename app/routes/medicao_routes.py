@@ -20,6 +20,21 @@ def get_latest(deviceId: Optional[str] = Query(default=None)):
     return result
 
 
+@router.get("/consumption/{deviceId}", summary="Consumo total de água (litros)")
+def get_total_consumption(deviceId: str):
+    return MedicaoService.get_total_consumption(deviceId)
+
+
+@router.get("/consumption/{deviceId}/cubic-meters", summary="Consumo total em metros cúbicos")
+def get_consumption_cubic_meters(deviceId: str):
+    return MedicaoService.get_consumption_cubic_meters(deviceId)
+
+
+@router.get("/consumption/{deviceId}/cost", summary="Custo total estimado do consumo de água")
+def get_consumption_cost(deviceId: str):
+    return MedicaoService.get_consumption_cost(deviceId)
+
+
 @router.get("", summary="Listar medições")
 def list_medicoes(
     deviceId: Optional[str] = Query(default=None),
