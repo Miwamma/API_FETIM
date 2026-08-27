@@ -1,0 +1,125 @@
+.section-title {
+  font-size: 15px;
+  font-weight: 700;
+  color: #1e293b;
+  margin-bottom: 14px;
+  text-transform: uppercase;
+  letter-spacing: .4px;
+}
+
+.section-state {
+  color: #64748b;
+  font-size: 14px;
+}
+
+.section-state--error {
+  color: #ef4444;
+}
+
+.last-measurement-card {
+  background: white;
+  border-radius: 20px;
+  padding: 32px;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, .06);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+  align-items: center;
+}
+
+.last-measurement-card__main {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 160px;
+}
+
+.last-measurement-card__label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: .5px;
+}
+
+.last-measurement-card__value {
+  font-size: 42px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.last-measurement-card__unit {
+  font-size: 20px;
+  font-weight: 500;
+  color: #64748b;
+}
+
+.last-measurement-card__details {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 20px;
+  flex: 1;
+  border-left: 1px solid #e2e8f0;
+  padding-left: 32px;
+}
+
+.last-measurement-card__detail {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.last-measurement-card__detail-label {
+  font-size: 12px;
+  color: #94a3b8;
+  text-transform: uppercase;
+  letter-spacing: .4px;
+}
+
+.last-measurement-card__detail-value {
+  font-size: 15px;
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.measurement-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.measurement-item {
+  background: white;
+  border-radius: 14px;
+  padding: 16px 22px;
+  box-shadow: 0 4px 14px rgba(15, 23, 42, .05);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.measurement-item__volume {
+  font-size: 18px;
+  font-weight: 700;
+  color: #0f172a;
+  min-width: 90px;
+}
+
+.measurement-item__meta {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  color: #64748b;
+  font-size: 13px;
+}
+
+@media (max-width: 700px) {
+  .last-measurement-card__details {
+    border-left: none;
+    padding-left: 0;
+    border-top: 1px solid #e2e8f0;
+    padding-top: 20px;
+  }
+}
