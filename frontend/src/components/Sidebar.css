@@ -1,0 +1,129 @@
+.sidebar {
+  width: 260px;
+  min-height: 100vh;
+  background: #0f172a;
+  color: #e2e8f0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 28px 20px;
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+
+.sidebar__logo {
+  font-size: 22px;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+.sidebar__description {
+  font-size: 13px;
+  color: #94a3b8;
+  line-height: 1.5;
+}
+
+.sidebar__nav {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 36px;
+}
+
+.sidebar__link {
+  padding: 12px 14px;
+  border-radius: 10px;
+  color: #cbd5e1;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background .15s, color .15s;
+}
+
+.sidebar__link:hover {
+  background: #1e293b;
+  color: white;
+}
+
+.sidebar__link--active {
+  background: #334155;
+  color: white;
+}
+
+.sidebar__account {
+  position: relative;
+}
+
+.sidebar__account-button {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: transparent;
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  color: #e2e8f0;
+}
+
+.sidebar__account-button:hover {
+  background: #1e293b;
+}
+
+.sidebar__avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #334155;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+.sidebar__account-name {
+  font-size: 14px;
+  font-weight: 600;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.sidebar__menu {
+  position: absolute;
+  bottom: 62px;
+  left: 0;
+  width: 100%;
+  background: #1e293b;
+  border-radius: 12px;
+  padding: 6px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, .3);
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.sidebar__menu-item {
+  padding: 10px 12px;
+  border-radius: 8px;
+  background: transparent;
+  border: none;
+  color: #e2e8f0;
+  text-align: left;
+  font-size: 14px;
+  cursor: pointer;
+  text-decoration: none;
+  display: block;
+}
+
+.sidebar__menu-item:hover {
+  background: #334155;
+}
+
+.sidebar__menu-item--danger {
+  color: #f87171;
+}
